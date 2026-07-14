@@ -194,7 +194,7 @@
       <h2 class="section-title">Eğitim</h2>
       <div class="edu-timeline reveal" style="max-width:640px; margin-top:2rem;">
         <div class="edu-item">
-          <div class="edu-dot">🎓</div>
+          <div class="edu-dot" aria-hidden="true">🎓</div>
           <div>
             <div class="edu-year">2021 – 2025</div>
             <div class="edu-title">Yüksek Lisans — Psikoloji</div>
@@ -202,7 +202,7 @@
           </div>
         </div>
         <div class="edu-item">
-          <div class="edu-dot">📖</div>
+          <div class="edu-dot" aria-hidden="true">📖</div>
           <div>
             <div class="edu-year">2017 – 2021</div>
             <div class="edu-title">Lisans — Psikoloji</div>
@@ -220,13 +220,13 @@
       <h2 class="section-title">Eğitimler &amp; Sertifikalar</h2>
       <p class="section-lead">Güncel ve kanıta dayalı terapi danışmanlığı yaklaşımlarında kapsamlı eğitimler aldım.</p>
       <div class="trainings-grid reveal">
-        <div class="training-pill"><span>🧸</span> Oyun Terapisi Danışmanlığı</div>
-        <div class="training-pill"><span>🧠</span> Bilişsel Davranışçı Terapi Danışmanlığı (BDT)</div>
-        <div class="training-pill"><span>🌿</span> Kabul ve Kararlılık Terapisi Danışmanlığı (ACT)</div>
-        <div class="training-pill"><span>🎨</span> Sanat Terapisi Danışmanlığı</div>
-        <div class="training-pill"><span>💭</span> Psikodinamik Psikoterapi</div>
-        <div class="training-pill"><span>📋</span> Psikiyatrik Testler (MMPI)</div>
-        <div class="training-pill"><span>🃏</span> TAT &amp; CAT Testleri</div>
+        <div class="training-pill"><span aria-hidden="true">🧸</span> Oyun Terapisi Danışmanlığı</div>
+        <div class="training-pill"><span aria-hidden="true">🧠</span> Bilişsel Davranışçı Terapi Danışmanlığı (BDT)</div>
+        <div class="training-pill"><span aria-hidden="true">🌿</span> Kabul ve Kararlılık Terapisi Danışmanlığı (ACT)</div>
+        <div class="training-pill"><span aria-hidden="true">🎨</span> Sanat Terapisi Danışmanlığı</div>
+        <div class="training-pill"><span aria-hidden="true">💭</span> Psikodinamik Psikoterapi</div>
+        <div class="training-pill"><span aria-hidden="true">📋</span> Psikiyatrik Testler (MMPI)</div>
+        <div class="training-pill"><span aria-hidden="true">🃏</span> TAT &amp; CAT Testleri</div>
       </div>
     </div>
   </section>
@@ -285,7 +285,7 @@
         </div>
       </div>
       <div class="footer-bottom">
-        <span>&copy; 2025 Uzm. Psk. Çağla Dilara Sipahi. Tüm hakları saklıdır.</span>
+        <span>&copy; <span id="footer-year">2026</span> Uzm. Psk. Çağla Dilara Sipahi. Tüm hakları saklıdır.</span>
         <span>Adana · Psikolojik Danışmanlık</span>
       </div>
     </div>
@@ -305,6 +305,7 @@
       });
     }, { threshold: 0.12 });
     document.querySelectorAll('.reveal').forEach(el => observer.observe(el));
+    document.getElementById('footer-year').textContent = new Date().getFullYear();
   </script>
 </body>
 </html>

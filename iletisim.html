@@ -129,21 +129,21 @@
 
           <div class="info-cards">
             <div class="info-card">
-              <div class="info-icon">📍</div>
+              <div class="info-icon" aria-hidden="true">📍</div>
               <div>
                 <h3>Adres</h3>
                 <p>Cemalpaşa Mahallesi, Cevat Yurdakul Caddesi,<br>Atabey Apartmanı Kat:2/3, Seyhan/Adana</p>
               </div>
             </div>
             <div class="info-card">
-              <div class="info-icon">📞</div>
+              <div class="info-icon" aria-hidden="true">📞</div>
               <div>
                 <h3>Telefon &amp; WhatsApp</h3>
                 <p><a href="tel:+905054217128">0 (505) 421 71 28</a></p>
               </div>
             </div>
             <div class="info-card">
-              <div class="info-icon">🕐</div>
+              <div class="info-icon" aria-hidden="true">🕐</div>
               <div>
                 <h3>Çalışma Saatleri</h3>
                 <table class="hours-table">
@@ -238,7 +238,7 @@
         </div>
       </div>
       <div class="footer-bottom">
-        <span>&copy; 2025 Uzm. Psk. Çağla Dilara Sipahi. Tüm hakları saklıdır.</span>
+        <span>&copy; <span id="footer-year">2026</span> Uzm. Psk. Çağla Dilara Sipahi. Tüm hakları saklıdır.</span>
         <span>Adana · Psikolojik Danışmanlık</span>
       </div>
     </div>
@@ -258,6 +258,7 @@
       });
     }, { threshold: 0.12 });
     document.querySelectorAll('.reveal').forEach(el => observer.observe(el));
+    document.getElementById('footer-year').textContent = new Date().getFullYear();
   </script>
 </body>
 </html>

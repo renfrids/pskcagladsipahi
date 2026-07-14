@@ -185,7 +185,7 @@
             <p>Çocuklar oynayarak anlatır. Özel materyallerle hazırlanan oyun odasında, çocuğun iç dünyasını güvenle keşfediyoruz.</p>
             <a href="/hizmetler" class="service-link">Detaylar <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M5 12h14M12 5l7 7-7 7"/></svg></a>
           </div>
-          <div class="service-row-icon">🧸</div>
+          <div class="service-row-icon" aria-hidden="true">🧸</div>
         </div>
         <div class="service-row reveal">
           <span class="service-num">02.</span>
@@ -194,7 +194,7 @@
             <p>Davranış değişiklikleri, öfke kontrolü, okul uyumu ve akran ilişkilerinde aile iş birliğiyle kişiye özel destek.</p>
             <a href="/hizmetler" class="service-link">Detaylar <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M5 12h14M12 5l7 7-7 7"/></svg></a>
           </div>
-          <div class="service-row-icon">🌱</div>
+          <div class="service-row-icon" aria-hidden="true">🌱</div>
         </div>
         <div class="service-row reveal">
           <span class="service-num">03.</span>
@@ -203,7 +203,7 @@
             <p>LGS ve YKS sürecindeki öğrencilerle performans görüşmeleri. Kaygıyı yönetilebilir bir güce dönüştürerek özgüveni inşa ediyoruz.</p>
             <a href="/hizmetler" class="service-link">Detaylar <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M5 12h14M12 5l7 7-7 7"/></svg></a>
           </div>
-          <div class="service-row-icon">📚</div>
+          <div class="service-row-icon" aria-hidden="true">📚</div>
         </div>
         <div class="service-row reveal">
           <span class="service-num">04.</span>
@@ -212,7 +212,7 @@
             <p>Ergen ve genç yetişkinler için uzaktan görüşme seçeneği. Coğrafi sınır olmaksızın profesyonel destek.</p>
             <a href="/hizmetler" class="service-link">Detaylar <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M5 12h14M12 5l7 7-7 7"/></svg></a>
           </div>
-          <div class="service-row-icon">💻</div>
+          <div class="service-row-icon" aria-hidden="true">💻</div>
         </div>
       </div>
     </div>
@@ -341,7 +341,7 @@
         </div>
       </div>
       <div class="footer-bottom">
-        <span>&copy; 2025 Uzm. Psk. Çağla Dilara Sipahi. Tüm hakları saklıdır.</span>
+        <span>&copy; <span id="footer-year">2026</span> Uzm. Psk. Çağla Dilara Sipahi. Tüm hakları saklıdır.</span>
         <span>Adana · Psikolojik Danışmanlık</span>
       </div>
     </div>
@@ -363,6 +363,7 @@
       });
     }, { threshold: 0.12 });
     document.querySelectorAll('.reveal').forEach(el => observer.observe(el));
+    document.getElementById('footer-year').textContent = new Date().getFullYear();
 
   </script>
 </body>
