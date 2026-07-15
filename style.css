@@ -801,3 +801,65 @@ em { font-style: italic; color: var(--primary); font-family: var(--font-display)
   .footer-grid  { grid-template-columns: 1fr; }
   .footer-bottom{ flex-direction: column; text-align: center; }
 }
+
+/* =============================================
+   STICKY BOTTOM CTA
+   ============================================= */
+.sticky-cta {
+  position: fixed;
+  bottom: -90px;
+  left: 0; right: 0;
+  z-index: 990;
+  background: var(--primary-dark);
+  color: #fff;
+  padding: .9rem 1.5rem;
+  box-shadow: 0 -4px 24px rgba(0,0,0,.18);
+  transition: bottom .38s cubic-bezier(.4,0,.2,1);
+}
+.sticky-cta.visible { bottom: 0; }
+.sticky-cta-inner {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 1.25rem;
+  max-width: 900px;
+  margin: 0 auto;
+  flex-wrap: wrap;
+}
+.sticky-cta-text {
+  font-size: .9rem;
+  color: rgba(255,255,255,.88);
+  line-height: 1.4;
+}
+.sticky-cta-text strong { color: #fff; }
+.sticky-cta-btn {
+  display: inline-flex;
+  align-items: center;
+  gap: .5rem;
+  background: #fff;
+  color: var(--primary-dark);
+  padding: .5rem 1.2rem;
+  border-radius: 6px;
+  font-size: .85rem;
+  font-weight: 600;
+  white-space: nowrap;
+  text-decoration: none;
+  transition: background var(--trans), transform var(--trans);
+}
+.sticky-cta-btn:hover { background: var(--primary-light); transform: translateY(-1px); }
+.sticky-cta-close {
+  background: none;
+  border: none;
+  color: rgba(255,255,255,.5);
+  font-size: 1.5rem;
+  cursor: pointer;
+  line-height: 1;
+  padding: 0 .25rem;
+  margin-left: .25rem;
+  transition: color var(--trans);
+}
+.sticky-cta-close:hover { color: #fff; }
+@media (max-width: 600px) {
+  .sticky-cta-inner { gap: .75rem; justify-content: space-between; }
+  .sticky-cta-text { font-size: .82rem; }
+}
