@@ -133,10 +133,6 @@
     .cta-box p { color: var(--text-muted); margin-bottom: 1.25rem; font-size: .92rem; }
     .faq-section { margin-top: 3rem; }
     .faq-section h2 { font-family: var(--font-display); font-size: 1.35rem; color: var(--heading); margin-bottom: 1.5rem; }
-    .faq-item { border-bottom: 1px solid var(--border); padding: 1.1rem 0; }
-    .faq-item:last-child { border-bottom: none; }
-    .faq-item h3 { font-family: var(--font-serif); font-size: 1rem; color: var(--heading); margin: 0 0 .5rem; font-weight: 500; }
-    .faq-item p { font-size: .93rem; color: var(--text); margin: 0; line-height: 1.75; }
     .author-box { display: flex; gap: 1.5rem; align-items: flex-start; background: var(--bg-alt); border-radius: var(--radius-lg); padding: 1.75rem; margin-top: 3.5rem; }
     .author-box img { width: 80px; height: 80px; border-radius: 50%; object-fit: cover; flex-shrink: 0; }
     .author-box .author-info h4 { font-family: var(--font-display); font-size: 1rem; color: var(--heading); margin: 0 0 .25rem; font-weight: 400; }
@@ -339,25 +335,27 @@
       <div class="faq-section">
         <h2>Sık Sorulan Sorular</h2>
 
-        <div class="faq-item">
-          <h3>Çocuğum zorbalığa uğradığını söylemiyor — nasıl anlayabilirim?</h3>
-          <p>Çoğu çocuk utanç, korku veya "kimse inanmaz" endişesiyle bunu saklıyor. Davranışsal belirtilere bakın: okula gitmek istememe, iştah değişikliği, uyku sorunu, sosyal geri çekilme, açıklanamayan fiziksel şikayetler. Bunlar birlikte görüldüğünde dikkate alınmalıdır.</p>
-        </div>
-        <div class="faq-item">
-          <h3>Okula haber verince durum daha kötü olur mu?</h3>
-          <p>Bu endişe çok yaygın ve tamamen anlaşılır. Okul yönetimiyle nasıl, ne zaman ve ne söyleyeceğinizi planlamak önemli. Bir uzmanla önce strateji konuşmak, hem sizin hem çocuğunuzun güvende hissetmesini sağlar.</p>
-        </div>
-        <div class="faq-item">
-          <h3>Siber zorbalık fiziksel zorbalık kadar zararlı mı?</h3>
-          <p>Evet — hatta bazı boyutlarda daha zorlu. Fiziksel alanda okulu bitince ev güvenlidir; siber zorbalık eve kadar gelir, 7/24 devam edebilir ve çoğu zaman anonim kalır. Sosyal dışlanma ve aşağılanma çok geniş bir kitleye anında yayılabilir.</p>
-        </div>
-        <div class="faq-item">
-          <h3>Zorbalık mağduru çocuğuma ne söylemeliyim?</h3>
-          <p>"Senin suçun değil" cümlesi gerçekten önemli. Çözüme değil, hissettiklerine yönelin: "Çok zor olmalı, anlat." Hemen "neden söylemedin" diye sormak çocuğu kapanmaya iter. Onu duyduğunuzu hissettirmek, çözümden önce gelir.</p>
-        </div>
-        <div class="faq-item">
-          <h3>Psikolojik destek ne zaman gerekli?</h3>
-          <p>Çocuğunuzda değişiklikler birkaç haftayı aştıysa, okul reddi başladıysa, uyku veya yeme ciddi biçimde bozulmuşsa ya da kendinizi "bir şeyler ters gidiyor" diye hissediyorsanız, bir ön görüşme yapmak için yeterli sebep var.</p>
+        <div class="faq-list">
+          <details class="faq-item">
+            <summary>Çocuğum zorbalığa uğradığını söylemiyor — nasıl anlayabilirim?</summary>
+            <p>Çoğu çocuk utanç, korku veya "kimse inanmaz" endişesiyle bunu saklıyor. Davranışsal belirtilere bakın: okula gitmek istememe, iştah değişikliği, uyku sorunu, sosyal geri çekilme, açıklanamayan fiziksel şikayetler. Bunlar birlikte görüldüğünde dikkate alınmalıdır.</p>
+          </details>
+          <details class="faq-item">
+            <summary>Okula haber verince durum daha kötü olur mu?</summary>
+            <p>Bu endişe çok yaygın ve tamamen anlaşılır. Okul yönetimiyle nasıl, ne zaman ve ne söyleyeceğinizi planlamak önemli. Bir uzmanla önce strateji konuşmak, hem sizin hem çocuğunuzun güvende hissetmesini sağlar.</p>
+          </details>
+          <details class="faq-item">
+            <summary>Siber zorbalık fiziksel zorbalık kadar zararlı mı?</summary>
+            <p>Evet — hatta bazı boyutlarda daha zorlu. Fiziksel alanda okulu bitince ev güvenlidir; siber zorbalık eve kadar gelir, 7/24 devam edebilir ve çoğu zaman anonim kalır. Sosyal dışlanma ve aşağılanma çok geniş bir kitleye anında yayılabilir.</p>
+          </details>
+          <details class="faq-item">
+            <summary>Zorbalık mağduru çocuğuma ne söylemeliyim?</summary>
+            <p>"Senin suçun değil" cümlesi gerçekten önemli. Çözüme değil, hissettiklerine yönelin: "Çok zor olmalı, anlat." Hemen "neden söylemedin" diye sormak çocuğu kapanmaya iter. Onu duyduğunuzu hissettirmek, çözümden önce gelir.</p>
+          </details>
+          <details class="faq-item">
+            <summary>Psikolojik destek ne zaman gerekli?</summary>
+            <p>Çocuğunuzda değişiklikler birkaç haftayı aştıysa, okul reddi başladıysa, uyku veya yeme ciddi biçimde bozulmuşsa ya da kendinizi "bir şeyler ters gidiyor" diye hissediyorsanız, bir ön görüşme yapmak için yeterli sebep var.</p>
+          </details>
         </div>
       </div>
 
