@@ -163,11 +163,39 @@ em { font-style: italic; color: var(--primary); font-family: var(--font-display)
 /* =============================================
    NAVBAR
    ============================================= */
-.navbar {
+/* Info bar */
+.info-bar {
   position: absolute;
   top: 0; left: 0; right: 0;
+  z-index: 1000;
+  background: var(--text);
+  color: rgba(245,240,232,.65);
+  font-size: 11.5px;
+  letter-spacing: .03em;
+}
+.info-bar-inner {
+  max-width: var(--max-w);
+  margin: 0 auto;
+  padding: 7px 40px;
+  display: flex;
+  align-items: center;
+  gap: .75rem;
+  flex-wrap: wrap;
+}
+.info-bar span { display: flex; align-items: center; gap: .35rem; }
+.info-bar a { color: rgba(245,240,232,.75); text-decoration: none; transition: color var(--trans); }
+.info-bar a:hover { color: #F5C96A; }
+.info-bar-sep { color: rgba(245,240,232,.2); }
+@media (max-width: 640px) { .info-bar { display: none; } }
+
+.navbar {
+  position: absolute;
+  top: 34px; left: 0; right: 0;
   z-index: 999;
   padding: 22px 40px;
+  background: var(--bg);
+  border-bottom: 1px solid var(--border);
+  box-shadow: 0 2px 12px rgba(0,0,0,.04);
 }
 .nav-inner {
   max-width: var(--max-w);
@@ -188,7 +216,7 @@ em { font-style: italic; color: var(--primary); font-family: var(--font-display)
   font-weight: 500;
   letter-spacing: .06em;
   text-transform: uppercase;
-  color: rgba(245,240,232,.8);
+  color: var(--text-muted);
   padding: .45rem .75rem;
   border-radius: 5px;
   transition: color var(--trans), background var(--trans);
@@ -196,12 +224,12 @@ em { font-style: italic; color: var(--primary); font-family: var(--font-display)
 .nav-left a:hover,
 .nav-right a.nav-link:hover,
 .nav-left a.active,
-.nav-right a.nav-link.active { color: rgba(245,240,232,1); background: rgba(255,255,255,.1); }
+.nav-right a.nav-link.active { color: var(--primary); background: var(--primary-light); }
 
 .nav-cta {
-  background: rgba(232,168,48,.2) !important;
-  border: 1px solid rgba(232,168,48,.5) !important;
-  color: #F5C96A !important;
+  background: rgba(99,153,34,.12) !important;
+  border: 1px solid rgba(99,153,34,.35) !important;
+  color: var(--primary-dark) !important;
   font-size: 11px !important;
   font-weight: 500 !important;
   padding: 8px 16px !important;
@@ -210,7 +238,7 @@ em { font-style: italic; color: var(--primary); font-family: var(--font-display)
   letter-spacing: .06em !important;
   transition: background var(--trans) !important;
 }
-.nav-cta:hover { background: rgba(232,168,48,.35) !important; }
+.nav-cta:hover { background: rgba(99,153,34,.2) !important; }
 
 .navbar-brand {
   display: flex;
@@ -223,14 +251,14 @@ em { font-style: italic; color: var(--primary); font-family: var(--font-display)
   font-size: 10px;
   letter-spacing: .1em;
   text-transform: uppercase;
-  color: rgba(245,240,232,.55);
+  color: var(--text-muted);
   font-weight: 500;
 }
 .navbar-brand .brand-name {
   font-family: var(--font-display);
   font-size: 1.05rem;
   font-weight: 400;
-  color: rgba(245,240,232,.95);
+  color: var(--text);
   letter-spacing: .01em;
 }
 
@@ -351,8 +379,8 @@ em { font-style: italic; color: var(--primary); font-family: var(--font-display)
   padding: 0 1.5rem;
 }
 .hero-eyebrow {
-  font-size: 13px;
-  font-weight: 500;
+  font-size: 16px;
+  font-weight: 600;
   letter-spacing: .12em;
   text-transform: uppercase;
   color: #F5C96A;
@@ -763,7 +791,7 @@ em { font-style: italic; color: var(--primary); font-family: var(--font-display)
   .navbar-brand { align-items: flex-start; }
 
 
-  .navbar { padding: 18px 20px; }
+  .navbar { padding: 18px 20px; top: 0; }
   .navbar-inner { padding: 14px 20px; }
 
   .hero { padding: 6rem 0 4.5rem; }
