@@ -341,7 +341,7 @@ em { font-style: italic; color: var(--primary); font-family: var(--font-display)
 }
 .hero-overlay {
   position: absolute; inset: 0; z-index: 1;
-  background: rgba(0, 0, 0, 0.42);
+  background: rgba(0, 0, 0, 0.62);
 }
 .hero-content {
   position: relative;
